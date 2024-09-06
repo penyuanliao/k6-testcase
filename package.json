@@ -1,0 +1,34 @@
+{
+  "name": "k6-testcase",
+  "version": "1.0.0",
+  "description": "k6測試範例",
+  "main": "testcase.js",
+  "engines": {
+    "node": "^16",
+    "k6": "^0.47.0"
+  },
+  "peerDependencies": {
+    "k6": "^0.47.0"
+  },
+  "devDependencies": {
+    "@types/k6": "~0.45.0"
+  },
+  "scripts": {
+    "run:k6": "k6 run testcase.js",
+    "run:k6-output": "k6 run --log-format csv --out csv=\"./csv.log\" --log-output=file=\"./k6.log\" testcase.js",
+    "run:k6-influxdb": "k6 run --out influxdb=http://user:pwd@ipaddress:port/db testcase.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/penyuanliao/k6-testcase.git"
+  },
+  "keywords": [
+    "k6"
+  ],
+  "author": "Benson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/penyuanliao/k6-testcase/issues"
+  },
+  "homepage": "https://github.com/penyuanliao/k6-testcase#readme"
+}
